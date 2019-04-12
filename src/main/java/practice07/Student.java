@@ -1,4 +1,18 @@
 package practice07;
 
-public class Student {
+public class Student extends Person{
+    private Klass klass;
+
+    Student(String name, int age ,Klass klass) {
+        super(name, age);
+        this.klass = klass;
+    }
+
+    public String introduce(){
+        return super.introduce()+" I am a Student. I am at Class "+klass.getNumber()+".";
+    }
+
+    public Klass getKlass(){
+        return this.klass;
+    }
 }
